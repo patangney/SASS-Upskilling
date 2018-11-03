@@ -1,0 +1,25 @@
+{
+  "name": "presentation",
+  "version": "1.0.0",
+  "description": "Sass Learning",
+  "main": "index.js",
+  "scripts": {
+    "bSync": "browser-sync start --server --files *.html, sass/*.scss, css/*.css, js/*.js",
+    "build-css": "node-sass --include-path sass sass/main.scss css/style.css -w",
+    "watchCSS": "nodemon -e sass -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patangney/sasslearning.git"
+  },
+  "author": "Patrick Tangney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patangney/sasslearning/issues"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.18.5"
+  },
+  "homepage": "https://github.com/patangney/sasslearning#readme"
+}
