@@ -34,25 +34,21 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__logo:hover {
-  animation: moveInLeft 2s ease-in; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /**This is in relation to the element itself */
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__logo:hover {
+    animation: moveInLeft 2s ease-in; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /**This is in relation to the element itself */
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -60,22 +56,20 @@ body {
   /** Backspace of element is hidden for element, hides the shaking in the element*/
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 3s;
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.7rem;
-  animation: moveInRight 2s ease-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    animation: moveInRight 2s ease-out; }
 
 /**
  * Animation 
@@ -122,7 +116,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
   font-size: 1.6rem; }
 
@@ -154,7 +148,7 @@ child of button
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all 0.4s; }
 
 .btn--white::after {
   background-color: #fff; }
@@ -166,5 +160,5 @@ child of button
   opacity: 0; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
