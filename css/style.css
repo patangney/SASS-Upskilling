@@ -1,3 +1,13 @@
+/* 
+    Brand Colors
+    Purple: #5C267B
+    Red: #D11A17
+    Aqua: #B9DAD0
+    Grey: #C7C8CA
+    Blue: #7EA8AD
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato");
 *,
 *::after,
 *::before {
@@ -17,11 +27,57 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  box-sizing: border-box; }
+
+.body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.7rem;
+    animation: moveInRight 2s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #5c267b, #D11A17);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-teritary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
 
 /**
  * Animation 
@@ -58,33 +114,29 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+.util-center-text {
+  text-align: center; }
 
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /** Backspace of element is hidden for element, hides the shaking in the element*/
-  backface-visibility: hidden;
+.util-mb-8 {
+  margin-bottom: 8rem; }
+
+.util-mb-7 {
+  margin-bottom: 7rem; }
+
+.util-mb-6 {
   margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 3s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.7rem;
-    animation: moveInRight 2s ease-out; }
+
+.util-mb-5 {
+  margin-bottom: 5rem; }
+
+.util-mb-4 {
+  margin-bottom: 4rem; }
+
+.util-mb-2 {
+  margin-bottom: 2rem; }
+
+.util-mb-1 {
+  margin-bottom: 1rem; }
 
 .btn {
   /**
@@ -132,9 +184,97 @@ body {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #5c267b;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #5c267b;
+  padding: 0.3rem; }
+
+.btn-text:hover {
+  background-color: #5c267b;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.95);
+  transform: translateY(-0.2rem); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.95);
+  transform: translateY(0rem); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 1.5rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #5c267b;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.8);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.85);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #5c267b, #D11A17);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(102, 71, 119, 0.699), rgba(64, 26, 86, 0.616)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, #5c267b, rgba(209, 26, 23, 0.6)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -154,3 +294,22 @@ body {
     /**This is in relation to the element itself */
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(92, 38, 123, 0.8), rgba(209, 26, 23, 0.8)), url(../../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-5deg);
+  margin-top: -11rem; }
+  .section-features > * {
+    transform: skewY(5deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem 0;
+  margin-top: -11rem; }
