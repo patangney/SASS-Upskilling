@@ -1,0 +1,179 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //hide backside of element
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    //image overlaps, hide to show border
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.6);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      background-color: $color-orange-dark;
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $card-one-primary,
+          $card-one-secondary
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $card-two-primary,
+          $card-two-secondary
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $card-three-primary,
+          $card-three-secondary
+        );
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    //works in chrome/firefox/safari (new option available, does not work in IE), just like photoshop
+    background-blend-mode: screen;    
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $card-one-primary,
+          $card-one-secondary
+        ),
+        url(https://picsum.photos/401/500/?random);
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        $card-two-primary,
+        $card-two-secondary
+      ), url(https://picsum.photos/402/500/?random);
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        $card-three-primary,
+        $card-three-secondary
+      ), url(https://picsum.photos/403/500/?random);
+    }
+  }
+
+  &__heading {
+      font-size: 2.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-align: right;
+      color: $color-white;
+      position: absolute;
+      top: 16rem;
+      right: 2rem;
+      width: 75%;
+
+  }
+
+  &__heading-span {
+      padding: 0.5rem 2.5rem;
+      
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      &--1 {
+          background-image: linear-gradient(to right bottom, 
+          rgba($card-one-primary, .85), 
+          rgba($card-one-secondary, .85));
+      }
+      &--2 {
+          background-image: linear-gradient(to right bottom, 
+          rgba($card-two-primary, .85), 
+          rgba($card-two-secondary, .85));
+      }
+      &--3 {
+          background-image: linear-gradient(to right bottom, 
+          rgba($card-three-primary, .85), 
+          rgba($card-three-secondary, .85));
+      }
+  }
+
+  &__details {
+      padding: 3rem;
+      ul {
+          list-style-type: none;
+          width: 80%;
+          //center block element inside a block element
+          margin: 0 auto;
+
+
+          li {
+              text-align: center;
+              font-size: 1.5rem;
+              padding: 1rem;
+
+              &:not(:last-child) {
+                  border-bottom: 1px solid $color-grey-light;
+              }
+          }
+      }
+  }
+
+  // Back Side Styling
+  &__cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  &__info-box {
+      text-align: center;
+      margin-bottom: 8rem;
+      color: $color-white;
+
+  }
+
+  &__enquiry-only {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+
+  }
+
+  &__enquiry-value {
+      font-size: 6rem;
+      font-weight: 100;
+
+  }
+
+}

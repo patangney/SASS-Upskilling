@@ -10,6 +10,7 @@
     z-index: 10;
     transition: all .2s;
     outline-offset: 1.5rem;
+    border-radius: 10px;
 
     &--p1 {
       left: 0;
@@ -25,10 +26,10 @@
     }
 
     &:hover {
-        outline: 1.5rem solid $color-primary;
+        outline: 1.5rem dashed $color-primary;
         transform: scale(1.05) translateY(-.5rem);
         box-shadow: 0 2.5rem 4rem rgba($color: $color-black, $alpha: 0.8);
-        z-index: 20;
+        z-index: 20;      
 
     }
 

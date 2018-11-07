@@ -5,11 +5,11 @@
       rgba($color-primary, 1),
       rgba($color-secondary, .6)
     ),
-    url(../img/hero.jpg);
+    url(https://picsum.photos/1920/1081/?random);
   background-size: cover;
   background-position: top;
   position: relative;
-
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 
   &__logo-box {

@@ -8,25 +8,47 @@
     Blue: #7EA8AD
 
 */
-
-//Brand - purple
-$color-primary: #5c267b;
+$color-primary: #5C267B;
+$color-secondary: #D11A17;
 $color-primary-light: #664777;
 $color-primary-dark: #401a56;
 
-$color-secondary: #D11A17;
-
-
 //Greys
+$color-grey-light: #eee;
 $color-grey-light-1: #f7f7f7;
 $color-grey-dark: #777;
 
-//Secondary
+//Black and white
 $color-white: #fff;
 $color-black: #000;
-//---------------------
 
-//Grids
+//Extra Colors
+$color-orange-light: #ffb900;
+$color-orange-dark: #ff7730;
+$color-blue-light: #2998ff;
+$color-blue-dark: #5643fa;
+$color-green-light: #55c57a;
+$color-green-dark: #28b485;
+$color-red: #D11A17;
+
+// Blues 
+//#449DD1 light
+//#150578 dark
+
+//Pink and Purple
+//#BC32AA
+//#861388
+
+//Card Colors
+$card-one-primary: $color-primary;
+$card-one-secondary: $color-secondary;
+$card-two-primary: $color-orange-light;
+$card-two-secondary: $color-orange-dark;
+$card-three-primary: $color-green-light;
+$card-three-secondary: $color-green-dark;
+
+
+//Grid & Gutter 
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;

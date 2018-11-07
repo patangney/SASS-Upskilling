@@ -1,0 +1,21 @@
+.card {
+    //Parent Block code here
+    
+
+    
+    &__side {
+        //Element CSS code 
+    
+        &--front {
+            //Modifer for Front Card
+            background-color: $color-primary;
+        }
+
+        &--back {
+            //Modifier for Back Card
+            background-color: $color-secondary;
+        }
+    
+    }
+
+}//end card

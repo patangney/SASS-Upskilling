@@ -9,14 +9,6 @@ $font-family: "Lato", sans-serif;
   box-sizing: inherit;
 }
 
-/** 
-    Root HTML - 1 rem = 10px
-    absolute default = 16px
-    10 / 16 = 0.625%
-    .625*16 = 10
-    0.625*22 - 13.75px etc
-*/
-
 html {
   font-size: 62.5%;
 }
