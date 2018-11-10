@@ -100,43 +100,55 @@ body {
     transform: translate(0); } }
 
 .util-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .util-mb-8 {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .util-mb-7 {
-  margin-bottom: 7rem; }
+  margin-bottom: 7rem !important; }
 
 .util-mb-6 {
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem !important; }
 
 .util-mb-5 {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem !important; }
 
 .util-mb-4 {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .util-mb-2 {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .util-mb-1 {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .util-mt-1 {
-  margin-top: 1rem; }
+  margin-top: 1rem !important; }
 
 .util-mt-2 {
-  margin-top: 2rem; }
+  margin-top: 2rem !important; }
 
 .util-mt-3 {
-  margin-top: 3rem; }
+  margin-top: 3rem !important; }
 
 .util-mt-4 {
-  margin-top: 4rem; }
+  margin-top: 4rem !important; }
 
 .util-mt-5 {
-  margin-top: 5rem; }
+  margin-top: 5rem !important; }
+
+.util-mt-6 {
+  margin-top: 6rem !important; }
+
+.util-mt-7 {
+  margin-top: 7rem !important; }
+
+.util-mt-8 {
+  margin-top: 8rem !important; }
+
+.util-mt-9 {
+  margin-top: 9rem !important; }
 
 .bg-video {
   position: absolute;
@@ -146,6 +158,15 @@ body {
   width: 100%;
   z-index: -1;
   opacity: .2; }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9), 0%, rgba(255, 255, 255, 0.9), 50%, transparent 50%), url(https://picsum.photos/1800);
+  background-size: 100%;
+  height: 50rem;
+  box-shadow: 0 1.5 4rem rgba(92, 38, 123, 0.2); }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -188,6 +209,12 @@ body {
   color: #fff; }
   .btn--secondary::after {
     background-color: #D11A17; }
+
+.btn--light {
+  background-color: #664777;
+  color: #fff; }
+  .btn--light::after {
+    background-color: #401a56; }
 
 .btn::after {
   content: "";
@@ -362,6 +389,82 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rbga(#fff, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #5C267B; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ffb900; }
+  .form__input::-webkit-input-placeholder {
+    color: #401a56; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #5C267B;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5C267B;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
 .user {
   width: 75%;
   margin: 0 auto;
@@ -488,3 +591,7 @@ body {
 .section-user {
   position: relative;
   padding: 15rem 0; }
+
+.section-book {
+  padding: 15rem;
+  background-image: linear-gradient(to right bottom, #5C267B, #D11A17); }

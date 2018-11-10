@@ -65,6 +65,13 @@
       background-color: $color-secondary;
     }
   }
+  &--light {
+    background-color: $color-primary-light;
+    color: $color-white;
+    &::after {
+      background-color: $color-primary-dark;
+    }
+  }
   &::after {
     content: "";
     display: inline-block;

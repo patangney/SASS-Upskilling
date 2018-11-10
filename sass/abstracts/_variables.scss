@@ -1,17 +1,14 @@
-//Colors
-/* 
-    Brand Colors
-    Purple: #5C267B
-    Red: #D11A17
-    Aqua: #B9DAD0
-    Grey: #C7C8CA
-    Blue: #7EA8AD
-
-*/
+//Default Colors
 $color-primary: #5C267B;
 $color-secondary: #D11A17;
 $color-primary-light: #664777;
 $color-primary-dark: #401a56;
+
+//Validation Colors
+$color-error: #D8000C;
+$color-success: #4F8A10;
+$color-warning: #ffb900;
+
 
 //Greys
 $color-grey-light: #eee;
@@ -30,14 +27,14 @@ $color-blue-dark: #5643fa;
 $color-green-light: #55c57a;
 $color-green-dark: #28b485;
 $color-red: #D11A17;
+$color-pink: #BC32AA;
+$color-purple: #861388;
+$color-coolblue-light: #449DD1;
+$color-coolblue-dark: #150578;
+$color-raspberry-light: #ec7079;
+$color-raspberry-dark: #d02828;
 
-// Blues 
-//#449DD1 light
-//#150578 dark
 
-//Pink and Purple
-//#BC32AA
-//#861388
 
 //Card Colors
 $card-one-primary: $color-primary;
@@ -46,6 +43,16 @@ $card-two-primary: $color-orange-light;
 $card-two-secondary: $color-orange-dark;
 $card-three-primary: $color-green-light;
 $card-three-secondary: $color-green-dark;
+
+// Demo Card Colors
+// $card-one-primary: $color-coolblue-light;
+// $card-one-secondary: $color-coolblue-dark;
+// $card-two-primary: $color-green-light;
+// $card-two-secondary: $color-green-dark;
+// $card-three-primary: $color-raspberry-light;
+// $card-three-secondary: $color-raspberry-dark;
+
+
 
 
 //Grid & Gutter 
